@@ -33,14 +33,25 @@
 
 </head>
 <body>
-    <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-">
-<input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-">
+    <input type="button" value="1" onclick="
+        console.log(this);
+    ">
+      <input type="button" value="2" onclick="
+      console.log(this);
+    ">
+
+    <input type="button" id="dnbtn" value="Night" onclick="
+        let button = document.querySelector('#dnbtn')
+        if(button.value === 'Night'){   
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            button.value = 'Light'
+        } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            button.value='Dark'
+        }
+    ">
     <h1><a href="index.html">WEB</a></h1>
     <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" width="500" height="500">
     <div id="container">
